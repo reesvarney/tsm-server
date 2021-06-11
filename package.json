@@ -1,0 +1,26 @@
+{
+  "name": "tsm-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-session-sequelize": "^7.1.1",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.2",
+    "fs": "0.0.1-security",
+    "keypair": "^1.0.3",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "passport-steam": "^1.0.15",
+    "sequelize": "^6.6.2",
+    "sqlite3": "^5.0.2",
+    "stream": "0.0.2"
+  }
+}
