@@ -27,7 +27,7 @@ dbPromise.then((db)=> {
   });
 
   var sessionMiddleware = session({
-    name: 'middleware',
+    name: 'tsmsession',
     secure: false,
     secret: secret,
     store: sessionStore,
@@ -92,7 +92,10 @@ dbPromise.then((db)=> {
   app.use(passport.initialize());
   app.use(passport.session());
 
-  console.log("Authentication ✔")
+  console.log("Authentication ✔");
+
+  var helmet = require('helmet');
+  app.use(helmet());
 
   app.get('/failed', async(req,res)=>{
     res.send("Authentication failed");
