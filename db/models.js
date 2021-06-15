@@ -215,7 +215,7 @@ module.exports = {
         allowNull: false
       },
       public_key: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         defaultValue: "",
         allowNull: false
       }
