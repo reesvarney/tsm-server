@@ -1,6 +1,6 @@
 const fs = require('fs');
 const {dbPromise, addModels} = require('./db/init.js');
-const port = 80;
+const port = process.env.PORT || 80;
 const steamAPIKey = process.env.STEAM_KEY;
 const secret = process.env.SECRET;
 const serverURL= process.env.URL;
