@@ -26,7 +26,7 @@ module.exports = function ({ db, passport, authStrings, checkAuth }) {
     var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
     var user = await db.models.User.findOne({where: {steam_id : req.params.steam_id}});
     if(user !== null){
-      if(userIPs[usert._id] == ip){
+      if(userIPs[user._id] == ip){
         var pair = keypair();
         user.update({public_key: pair.public});
         res.json({user_id: user._id, privateKey: pair.private});
