@@ -43,6 +43,7 @@ module.exports = function ({ db, passport, authStrings, checkAuth }) {
     if(user !== null){
       var randomBytes = crypto.randomBytes(64).toString('utf8');
       var encrypted = crypto.publicEncrypt(user.public_key, Buffer.from(randomBytes, "utf8")).toString('base64');
+      console.log(`Encrypted data: ${encrypted}`)
       authStrings[user._id] = randomBytes;
       res.json({data: encrypted});
     }
