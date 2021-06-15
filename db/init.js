@@ -1,14 +1,15 @@
 const { Sequelize } = require("sequelize");
 const databaseURL = process.env.DATABASE_URL || null;
+var sequelize;
 
 if(databaseURL === null){
-  const sequelize = new Sequelize({
+  sequelize = new Sequelize({
     dialect: "sqlite",
     storage: "./db/sqlite/db.sqlite",
     logging: false
   });
 } else {
-  const sequelize = new Sequelize(databaseURL, {
+  sequelize = new Sequelize(databaseURL, {
     dialect: 'postgres',
     protocol: 'postgres',
     dialectOptions: {
