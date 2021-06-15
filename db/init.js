@@ -1,9 +1,22 @@
 const { Sequelize } = require("sequelize");
-const sequelize = new Sequelize({
-  dialect: "sqlite",
-  storage: "./db/sqlite/db.sqlite",
-  logging: false
-});
+const databaseURL = process.env.DATABASE_URL || null;
+
+if(databaseURL === null){
+  const sequelize = new Sequelize({
+    dialect: "sqlite",
+    storage: "./db/sqlite/db.sqlite",
+    logging: false
+  });
+} else {
+  const sequelize = new Sequelize(databaseURL, {
+    dialect: 'postgres',
+    protocol: 'postgres',
+    dialectOptions: {
+        ssl: true
+    }
+  });
+}
+
 
 const relations = {
   belongsTo: function (model, target, opts) {
