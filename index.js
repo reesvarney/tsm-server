@@ -38,6 +38,7 @@ dbPromise.then((db)=> {
 
   sessionStore.sync();
   var app = express();
+  app.set('trust proxy', 1);
 
   app.use(sessionMiddleware);
   app.use(cookieParser);
