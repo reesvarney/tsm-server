@@ -12,6 +12,7 @@ if(databaseURL === null){
   sequelize = new Sequelize(databaseURL, {
     dialect: 'postgres',
     protocol: 'postgres',
+    logging: false,
     dialectOptions: {
       ssl: {
         require: true,
