@@ -4,7 +4,7 @@ module.exports = {
   // RoleAssignment: {
   //   attributes: {
   //     id: {
-  //       type: DataTypes.UUIDV4,
+  //       type: DataTypes.UUID,
   //       defaultValue: Sequelize.UUIDV4,
   //       unique: true,
   //       primaryKey: true
@@ -17,7 +17,7 @@ module.exports = {
   Setup: {
     attributes: {
       _id: {
-        type: DataTypes.UUIDV4,
+        type: DataTypes.UUID,
         defaultValue: Sequelize.UUIDV4,
         unique: true,
         primaryKey: true
@@ -85,7 +85,7 @@ module.exports = {
   Rating: {
     attributes: {
       _id: {
-        type: DataTypes.UUIDV4,
+        type: DataTypes.UUID,
         defaultValue: Sequelize.UUIDV4,
         unique: true,
         primaryKey: true
@@ -109,7 +109,7 @@ module.exports = {
   Sim: {
     attributes: {
       _id: {
-        type: DataTypes.UUIDV4,
+        type: DataTypes.UUID,
         defaultValue: Sequelize.UUIDV4,
         unique: true,
         primaryKey: true
@@ -134,7 +134,7 @@ module.exports = {
   SimVersion: {
     attributes: {
       _id: {
-        type: DataTypes.UUIDV4,
+        type: DataTypes.UUID,
         defaultValue: Sequelize.UUIDV4,
         unique: true,
         primaryKey: true
@@ -149,7 +149,7 @@ module.exports = {
   Car: {
     attributes: {
       _id: {
-        type: DataTypes.UUIDV4,
+        type: DataTypes.UUID,
         defaultValue: Sequelize.UUIDV4,
         unique: true,
         primaryKey: true
@@ -174,7 +174,7 @@ module.exports = {
   Track: {
     attributes: {
       _id: {
-        type: DataTypes.UUIDV4,
+        type: DataTypes.UUID,
         defaultValue: Sequelize.UUIDV4,
         unique: true,
         primaryKey: true
@@ -199,7 +199,7 @@ module.exports = {
   User: {
     attributes: {
       _id: {
-        type: DataTypes.UUIDV4,
+        type: DataTypes.UUID,
         defaultValue: Sequelize.UUIDV4,
         unique: true,
         primaryKey: true
